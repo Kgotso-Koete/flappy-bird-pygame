@@ -6,6 +6,10 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 ---
 
+### Click here for the [demo](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1)
+
+---
+
 ### Technology stack
 
 1. Python 3.10.4
@@ -21,7 +25,8 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 ### 3: Run project
 
-Navigate to the project folder and run `python3 main.py` to start the game
+1. Run locally: Navigate to the project folder and run `python3 main.py` to start the game.
+2. Run in the browser: Visit the [Replit](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1)
 
 ---
 
