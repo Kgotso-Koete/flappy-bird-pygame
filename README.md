@@ -17,7 +17,7 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 ---
 
-### Install on Linux or Windows:
+### Install the project on Linux or Windows:
 
 1. Download this codebase
 2. Install Python 3.10.4 on your machine
@@ -25,8 +25,18 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 ### 3: Run project
 
-1. Run locally: Navigate to the project folder and run `python3 main.py` to start the game.
+1. Run locally: Navigate to the project folder and run `python3 flappy_bird_pygame.py` to start the game.
 2. Run in an an in-browser IDE: Visit the [Replit](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1) and run in full screen mode for the best experience.
+
+### Build project executable
+
+Follow the instructions below to build an executable file for Windows and Ubuntu Linux
+
+1. Install executable builder `pip install cx_freeze`
+2. Run `python3 setup.py build` to build the Linux executable
+3. Run `python setup.py bdist_msi` to build the Linux executable
+4. To find the Linux executable, navigate to the folder `build/exe.linux-x86_64-3.10` and find the `flappy_bird_pygame` executable
+5. To find the Windows executable, navigate to the folder `??` and find the `flappy_bird_pygame` executable
 
 ---
 
