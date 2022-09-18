@@ -1,3 +1,4 @@
+import sys
 from cx_Freeze import setup, Executable
 
 # with help from :https://stackoverflow.com/a/72324127/6556133
@@ -13,10 +14,12 @@ build_exe_options = {
     ]
 }
 
+base = sys.platform if sys.platform.lower() == "windows" else None
+
 setup(
     name="flappy_bird_pygame",
     version="0.1",
     description="",
     options={"build_exe": build_exe_options},
-    executables=[Executable("flappy_bird_pygame.py", base="Win32GUI")],
+    executables=[Executable("flappy_bird_pygame.py", base=base)],
 )  # Program name
