@@ -21,7 +21,7 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 1. Download this codebase
 2. Install Python 3.10.4 on your machine
-3. Install Pygame 2.1.2
+3. Install Pygame 2.1.2 (Linux `python3 pip install pygame`) (Windows `python3 -m pip install pygame`)
 
 ### 3: Run project
 
@@ -30,13 +30,18 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 ### Build project executable
 
-Follow the instructions below to build an executable file for Windows and Ubuntu Linux
+Follow the instructions below to build an executable file for Ubuntu Linux
 
 1. Install executable builder `pip install cx_freeze`
-2. Run `python3 setup.py build` to build the Linux executable
-3. Run `python setup.py bdist_msi` to build the Linux executable
-4. To find the Linux executable, navigate to the folder `build/exe.linux-x86_64-3.10` and find the `flappy_bird_pygame` executable
-5. To find the Windows executable, navigate to the folder `??` and find the `flappy_bird_pygame` executable
+2. Build the Linux executable by running the following command `python3 setup.py build`
+3. The Linux executable file will in the following folder `./build/exe.linux-x86_64-3.10`
+
+Follow the instructions below to build an executable file for Windows
+
+1. Ensure that the [set.py](./setup.py) Executable function has the additional argument `base="Win32GUI"` to stop the command window from opening every time the executable is running.
+2. Install executable builder `pip install cx_freeze`
+3. Build the Windows executable by running the following command `python3 setup.py build`
+4. The [Windows executable file](./build/exe.win-amd64-3.10/flappy_bird_pygame.exe) will in the following folder `./build/exe.win-amd64-3.10`. The executable must contain all supporting files in this folder to run.
 
 ---
 
