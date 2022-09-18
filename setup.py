@@ -14,7 +14,7 @@ build_exe_options = {
     ]
 }
 
-base = sys.platform if sys.platform.lower() == "windows" else None
+base = "Win32GUI" if sys.platform.lower() == "win32" else None
 
 setup(
     name="flappy_bird_pygame",

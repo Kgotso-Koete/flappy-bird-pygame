@@ -32,16 +32,17 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 Follow the instructions below to build an executable file for Ubuntu Linux
 
-1. Install executable builder `pip install cx_freeze`
-2. Build the Linux executable by running the following command `python3 setup.py build`
-3. The Linux executable file will in the following folder `build/exe.linux-x86_64-3.10`
+1. Ensure that the [set.py](./setup.py) Executable function does NOT have an additional argument `base="Win32GUI"`
+2. Install executable builder `pip install cx_freeze`
+3. Build the Linux executable by running the following command `python3 setup.py build`
+4. The [Linux executable file](./build/exe.linux-x86_64-3.10/flappy_bird_pygame) will in the following folder `./build/exe.linux-x86_64-3.10`
 
 Follow the instructions below to build an executable file for Windows
 
 1. Ensure that the [set.py](./setup.py) Executable function has the additional argument `base="Win32GUI"` to stop the command window from opening every time the executable is running.
 2. Install executable builder `pip install cx_freeze`
 3. Build the Windows executable by running the following command `python3 setup.py build`
-4. Windows executable file will in the following folder `build/exe.linux-x86_64-3.10`
+4. The [Windows executable file](./build/exe.win-amd64-3.10/flappy_bird_pygame.exe) will in the following folder `./build/exe.win-amd64-3.10`. The executable must contain all supporting files in this folder to run.
 
 ---
 
