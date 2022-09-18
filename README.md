@@ -8,6 +8,10 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 ### Click here for the [demo](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1)
 
+1. Play it in the [in-browser game](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1) here.
+2. Play it on a Windows desktop by downloading the [Windows build folder](./build/exe.win-amd64-3.10/) and clicking on the .exe file
+3. Play it on a Linux desktop by downloading the [Linux build folder](./build/exe.linux-x86_64-3.10/) and clicking on the executable file
+
 ---
 
 ### Technology stack
