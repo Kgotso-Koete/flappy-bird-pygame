@@ -14,6 +14,7 @@ build_exe_options = {
     ]
 }
 
+# stop the command window from opening every time the executable is running in Windows
 base = "Win32GUI" if sys.platform.lower() == "win32" else None
 
 setup(
