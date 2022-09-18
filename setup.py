@@ -1,6 +1,6 @@
 from cx_Freeze import setup, Executable
 
-# with help from :https://pythonprogramming.net/converting-pygame-executable-cx_freeze/
+# with help from :https://stackoverflow.com/a/72324127/6556133
 # with help from :https://pythonprogramming.net/converting-pygame-executable-cx_freeze/
 build_exe_options = {
     "include_files": [
