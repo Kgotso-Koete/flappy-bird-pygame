@@ -5,8 +5,10 @@
 This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Flappy_Bird) built while following the [Clear Code tutorial part 1](https://youtu.be/UZg49z76cLw) and [Clear Code tutorial part 2](https://youtu.be/XRw1FUEsSv4). [Flappy Bird](https://en.wikipedia.org/wiki/Flappy_Bird)is a mobile game developed by Vietnamese video game artist and programmer Dong Nguyen (Vietnamese: Nguyễn Hà Đông), under his game development company .Gears. The game is a side-scroller where the player controls a bird, attempting to fly between columns of green pipes without hitting them
 
 ---
+
 ### Click here for the [video demo](https://youtu.be/BIAUv-EzMqE)
-### Click here for the [demo](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1)
+
+### Click here for the [playable in-browser demo](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1)
 
 1. Play it in the [in-browser game](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1) here.
 2. Play it on a Windows desktop by downloading the [Windows build folder](./build/exe.win-amd64-3.10/) and clicking on the .exe file
