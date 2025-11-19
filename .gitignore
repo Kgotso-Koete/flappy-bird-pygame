@@ -21,3 +21,15 @@
 # System Files
 .DS_Store
 Thumbs.db
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+/__pycache__
+/utils/__pycache__
+# compiled output
+/ENV
+/.venv
+
+# PyInstaller files
+/build/
+# PyInstaller build directory
+build/

@@ -11,8 +11,8 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 ### Click here for the [playable in-browser demo](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1)
 
 1. Play it in the [in-browser game](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1) here.
-2. Play it on a Windows desktop by downloading the [Windows build folder](./build/exe.win-amd64-3.10/) and clicking on the .exe file
-3. Play it on a Linux desktop by downloading the [Linux build folder](./build/exe.linux-x86_64-3.10/) and clicking on the executable file
+2. Play it on a Windows desktop by downloading the [Windows build folder](./dist/flappy-bird-pygame.exe) and clicking on the .exe file
+3. Play it on a Linux desktop by downloading the [Linux build folder](./dist/flappy-bird-pygame) and clicking on the executable file
 
 ---
 
@@ -26,32 +26,99 @@ This is a clone of the video game [Flappy Bird](https://en.wikipedia.org/wiki/Fl
 
 ### Technology stack
 
-1. Python 3.10.4
-2. Pygame 2.1.2
+1. Python 3.12.3
+2. Pygame 2.6.1
 
 ---
 
-### Install the project on Linux or Windows:
+### Install the project on Ubuntu Linux:
 
-1. Download this codebase
-2. Install Python 3.10.4 on your machine
-3. Install Pygame 2.1.2 (Linux `python3 pip install pygame`) (Windows `python3 -m pip install pygame`)
+1. **Download codebase:** Clone or download the source code to your local machine.
+
+2. **Install System Dependencies:** Pygame requires the SDL2 library. Install it using the following command:
+
+   ```bash
+   sudo apt-get update && sudo apt-get install -y libsdl2-dev
+   ```
+
+3. **Create a Virtual Environment:** It's recommended to use a virtual environment to manage project dependencies. Navigate to the project's root directory and run:
+
+   ```bash
+   python -m venv .venv
+   ```
+
+4. **Activate the Virtual Environment:**
+
+   ```bash
+   source .venv/bin/activate
+   ```
+
+5. **Install Python Packages:** Install all the required packages from the `requirements.txt` file:
+
+   ```bash
+   pip install -r requirements-windows.txt
+   ```
+
+   or
+
+   ```bash
+   pip install -r requirements-linux.txt
+   ```
+
+---
 
 ### 3: Run project
 
 1. Run locally: Navigate to the project folder and run `python3 flappy_bird_pygame.py` to start the game.
 2. Run in an an in-browser IDE: Visit the [Replit](https://replit.com/@KgotsoKoete/Flappy-Bird-Pygame?v=1) and run in full screen mode for the best experience.
 
-### Build project executable
+### Build a Single Executable for Distribution
 
-Follow the instructions below to build an executable file for Ubuntu Linux and Windows
+To create a single executable file for distribution on platforms like itch.io, we will use `PyInstaller`.
 
-1. Install executable builder `pip install cx_freeze`
-2. Build the Windows executable by running the following command `python3 setup.py build`
+1. **Install PyInstaller:**
+   Ensure your virtual environment is active and run:
 
-The [Linux executable file](./build/exe.linux-x86_64-3.10/flappy_bird_pygame) will in the following folder `./build/exe.linux-x86_64-3.10`
+   ```bash
+   pip install pyinstaller
+   ```
 
-The [Windows executable file](./build/exe.win-amd64-3.10/flappy_bird_pygame.exe) will in the following folder `./build/exe.win-amd64-3.10`. The executable must contain all supporting files in this folder to run.
+2. **Build the Executable:**
+   Run the appropriate command for your operating system from the project root.
+
+   **For Linux:**
+
+   ```bash
+   pyinstaller --onefile --windowed --name flappy-bird-pygame --add-data 'assets:assets' --add-data 'sound:sound' --add-data '04B_19.TTF:.' flappy_bird_pygame.py
+   ```
+
+   **For Windows:**
+
+   ```cmd
+   pyinstaller --onefile --windowed --name flappy-bird-pygame `
+   --add-data "assets;assets" `
+   --add-data "app;app" `
+   flappy_bird_pygame.py
+   ```
+
+   After the process completes, you will find the single executable file inside the `dist` folder. This is the file you can upload for distribution.
+
+3. **Testing the Linux Executable:**
+   Before distributing, you can test the executable on Linux.
+
+   First, make the file executable:
+
+   ```bash
+   chmod +x dist/flappy-bird-pygame
+   ```
+
+   Then, run it from the terminal:
+
+   ```bash
+   ./dist/flappy-bird-pygame
+   ```
+
+---
 
 ---
 

@@ -1,5 +1,5 @@
-import pygame, sys, random
-
+import pygame, sys, random, os
+from utils.paths import resource_path
 
 def draw_floor():
     # draw first floor
@@ -99,24 +99,24 @@ def pipe_score_check():
 pygame.init()
 screen = pygame.display.set_mode((576, 1024))
 clock = pygame.time.Clock()
-game_font = pygame.font.Font("04B_19.TTF", 40)
+game_font = pygame.font.Font(resource_path("04B_19.TTF"), 40)
 
 # game variables
 gravity = 0.25
 bird_movement = 0
 
 # import surface
-bg_surface = pygame.image.load("assets/background-day.png").convert()
+bg_surface = pygame.image.load(resource_path("assets/background-day.png")).convert()
 # scale up surface size
 bg_surface = pygame.transform.scale2x(bg_surface)
 
 floor_x_pos = 0
-floor_surface = pygame.image.load("assets/base.png").convert()
+floor_surface = pygame.image.load(resource_path("assets/base.png")).convert()
 floor_surface = pygame.transform.scale2x(floor_surface)
 
-up_bird_surface = pygame.image.load("assets/bluebird-upflap.png").convert_alpha()
-mid_bird_surface = pygame.image.load("assets/bluebird-midflap.png").convert_alpha()
-down_bird_surface = pygame.image.load("assets/bluebird-downflap.png").convert_alpha()
+up_bird_surface = pygame.image.load(resource_path("assets/bluebird-upflap.png")).convert_alpha()
+mid_bird_surface = pygame.image.load(resource_path("assets/bluebird-midflap.png")).convert_alpha()
+down_bird_surface = pygame.image.load(resource_path("assets/bluebird-downflap.png")).convert_alpha()
 bird_upflap = pygame.transform.scale2x(up_bird_surface)
 bird_midflap = pygame.transform.scale2x(mid_bird_surface)
 bird_downflap = pygame.transform.scale2x(down_bird_surface)
@@ -131,7 +131,7 @@ pygame.time.set_timer(BIRDFLAP, 200)
 # bird_surface = pygame.transform.scale2x(bird_surface)
 # bird_rect = bird_surface.get_rect(center=(100, 512))
 
-pipe_surface = pygame.image.load("assets/pipe-green.png")
+pipe_surface = pygame.image.load(resource_path("assets/pipe-green.png"))
 pipe_surface = pygame.transform.scale2x(pipe_surface)
 pipe_list = []
 SPAWNPIPE = pygame.USEREVENT
@@ -143,13 +143,13 @@ score = 0
 high_score = 0
 can_score = True
 
-game_over_surface = pygame.image.load("assets/message.png").convert_alpha()
+game_over_surface = pygame.image.load(resource_path("assets/message.png")).convert_alpha()
 game_over_surface = pygame.transform.scale2x(game_over_surface)
 game_over_rect = game_over_surface.get_rect(center=(288, 512))
 
-flap_sound = pygame.mixer.Sound("sound/sfx_wing.wav")
-death_sound = pygame.mixer.Sound("sound/sfx_hit.wav")
-score_sound = pygame.mixer.Sound("sound/sfx_point.wav")
+flap_sound = pygame.mixer.Sound(resource_path("sound/sfx_wing.wav"))
+death_sound = pygame.mixer.Sound(resource_path("sound/sfx_hit.wav"))
+score_sound = pygame.mixer.Sound(resource_path("sound/sfx_point.wav"))
 score_sound_countdown = 100
 
 if __name__ == "__main__":
